@@ -118,10 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('pixelBoard', JSON.stringify(pixelBoardState));
       });
 
-      // Pinta o pixel ao arrastar o mouse
       pixel.addEventListener('mousedown', () => {
         painting = true;
       });
+  
       pixel.addEventListener('mousemove', (event) => {
         if (painting) {
           const clickedPixel = event.target;
@@ -132,27 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('pixelBoard', JSON.stringify(pixelBoardState));
         }
       });
-      pixel.addEventListener('touchstart', () => {
-        painting = true;
-      });
-      pixel.addEventListener('touchmove', (event) => {
-        event.preventDefault();
-        if (painting) {
-          const clickedPixel = event.target;
-          clickedPixel.style.backgroundColor = colorSelected;
 
-          const pixelBoardState = JSON.parse(localStorage.getItem('pixelBoard')) || {};
-          pixelBoardState[index] = colorSelected;
-          localStorage.setItem('pixelBoard', JSON.stringify(pixelBoardState));
-        }
-      });
       document.addEventListener('mouseup', () => {
         painting = false;
       });
-      document.addEventListener('touchend', () => {
-        painting = false;
-      });
-      
 
       // Verifica se há cor salva no localStorage para esse pixel
       const pixelBoardState = JSON.parse(localStorage.getItem('pixelBoard')) || {};
