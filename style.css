@@ -110,7 +110,23 @@ img {
   justify-content: center;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(13, 0, 255);
+  cursor: pointer;
+}
+
 @media screen and (max-width: 580px) {
+  img {
+    display: none;
+  }
+
   .pixel {
     width: 20px;
     height: 20px;
@@ -138,6 +154,50 @@ img {
   }
 
   #board-size {
-    font-size: 15px;
+    font-size: 25px;
+  }
+
+  #pixel-board {
+    width: 198px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  img {
+    display: none;
+  }
+
+  .pixel {
+    width: 15px;
+    height: 15px;
+  }
+
+  #title {
+    font-size: 40px;
+  }
+
+  .color {
+    width: 30px;
+    height: 30px;
+  }
+
+  #button-random-color {
+    font-size: 12px;
+  }
+  
+  #generate-board {
+    font-size: 12px;
+  }
+
+  #clear-board {
+    font-size: 12px;
+  }
+
+  #board-size {
+    font-size: 12px;
+  }
+
+  #pixel-board {
+    width: 153px;
   }
 }

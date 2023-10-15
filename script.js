@@ -8,9 +8,9 @@ let colorSelected = 'black';
 const localStorageColorRandom = JSON.parse(localStorage.getItem('colorPalette'));
 if (localStorageColorRandom !== null) {
   const [color2, color3, color4] = localStorageColorRandom;
-  colors[1].style.backgroundColor = color2;
-  colors[2].style.backgroundColor = color3;
-  colors[3].style.backgroundColor = color4;
+  colors[2].style.backgroundColor = color2;
+  colors[3].style.backgroundColor = color3;
+  colors[4].style.backgroundColor = color4;
 }
 
 // Muda a cor da paleta de escola de cores e armazena no localStorage
@@ -23,9 +23,9 @@ buttonRandonColors.addEventListener('click', () => {
   const color3 = getRandomColor();
   const color4 = getRandomColor();
 
-  colors[1].style.backgroundColor = color2;
-  colors[2].style.backgroundColor = color3;
-  colors[3].style.backgroundColor = color4;
+  colors[2].style.backgroundColor = color2;
+  colors[3].style.backgroundColor = color3;
+  colors[4].style.backgroundColor = color4;
 
   const palette = [color2, color3, color4];
   localStorage.setItem('colorPalette', JSON.stringify(palette));
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function widthPixelBoard(number) {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth < 580) {
+    if (screenWidth < 580 && screenWidth > 340) {
       const widths = {
         1: '110px',
         2: '110px',
@@ -50,6 +50,25 @@ document.addEventListener('DOMContentLoaded', () => {
         10: '220px',
         11: '242px',
         12: '264px',
+      };
+      
+      return sectionPixel.style.width = widths[number] || '';
+    }
+
+    if (screenWidth < 340) {
+      const widths = {
+        1: '85px',
+        2: '85px',
+        3: '85px',
+        4: '85px',
+        5: '85px',
+        6: '102px',
+        7: '119px',
+        8: '136px',
+        9: '153px',
+        10: '170px',
+        11: '187px',
+        12: '204px',
       };
       
       return sectionPixel.style.width = widths[number] || '';
@@ -73,6 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionPixel.style.width = widths[number] || '';
   }
 
+  // Atualiza a largura do quadro de pixels ao redimensionar a tela
+  window.addEventListener('resize', () => {
+    const inputBoardSize = document.querySelector('#board-size');
+    const boardSize = inputBoardSize.value;
+    widthPixelBoard(boardSize);
+  });
+  
+
   // Cria os pixels do quadro de pixels, armazena no localStorage e define o tamanho do quadro
   let storageRead = false;
   const createBoard = (numberCreatePixels) => {
@@ -85,12 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const inputBoardSize = document.querySelector('#board-size');
       inputBoardSize.value = boardSize;
+
       storageRead = true;
     } else {
       numberPixels = numberCreatePixels * numberCreatePixels;
-      console.log('numberPixels', numberPixels);
       if (!numberCreatePixels || numberCreatePixels === '' || numberCreatePixels === null) { numberPixels = 81; }
       widthPixelBoard(numberCreatePixels);
+
       const inputBoardSize = document.querySelector('#board-size');
       inputBoardSize.value = numberPixels === 81 ? 9 : numberCreatePixels;
     }
@@ -186,5 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
     clearPixelBoard();
     localStorage.setItem('boardSize', boardSize);
   });
+
+  if (localStorage.getItem('boardSize') !== null) {
+    const boardSize = localStorage.getItem('boardSize');
+    widthPixelBoard(boardSize);
+  }
 });
 
