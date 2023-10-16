@@ -1,52 +1,44 @@
-# Pixels Painter - Aplicação de Arte em Pixel
+# <img src="./img/Pixel_Painters.webp" alt="Imagem 1 - Página Inicial" width="40"/> Pixels Painter - Aplicação de Arte em Pixel
 
 ## Visão Geral
 
 O Pixels Painter é uma aplicação web de arte em pixel que permite aos usuários criar desenhos pixelados usando uma variedade de cores. Os usuários podem selecionar cores de uma paleta, desenhar em uma grade e salvar suas criações localmente. A aplicação também oferece recursos como gerar uma nova tela, limpar a tela atual e gerar cores aleatórias.
 
-## Tecnologias Utilizadas
+## Deploy e Imagens do Projeto
+
+A aplicação está disponível online e pode ser acessada [aqui](https://pixel-painter-gamma.vercel.app/).
+
+![Imagem 1 - Página Inicial](./img/Demonstração.png)
+
+## Tecnologias e Técnicas Utilizadas
 
 - **HTML**: A estrutura da página web é definida usando HTML.
 
 - **CSS**: A apresentação e o layout da página web são estilizados usando CSS.
 
 - **JavaScript**: A funcionalidade da aplicação é implementada usando JavaScript.
+ 
+**Manipulação do DOM**: O projeto utiliza JavaScript para interagir com o Document Object Model (DOM) da página web. Isso permite a criação dinâmica de elementos HTML, a adição de event listeners e a atualização de estilos e conteúdos em tempo real.
+
+**Armazenamento Local**: A aplicação faz uso do Local Storage do navegador para persistir o estado do quadro de pixels, a paleta de cores e o tamanho do quadro. Isso garante que os desenhos dos usuários sejam mantidos mesmo após a atualização ou fechamento da página.
+
+**Geração de Cores Aleatórias**: Ao clicar no botão "Cores Aleatórias", a aplicação gera cores aleatórias em formato hexadecimal, proporcionando aos usuários uma ampla gama de opções de cores para escolher.
+
+**Responsividade**: O tamanho do quadro de pixels é adaptado com base no tamanho da tela do dispositivo do usuário. Isso garante uma experiência consistente, independentemente do dispositivo utilizado para acessar a aplicação.
 
 ## Funcionalidades
 
-### Paleta de Cores
+**Paleta de Cores**: Os usuários podem selecionar cores de uma paleta para usar na pintura.
 
-- Os usuários podem selecionar cores de uma paleta para usar na pintura.
+**Cores Aleatórias**: Existe um botão que gera cores aleatórias para a paleta.
 
-### Cores Aleatórias
+**Tamanho do Quadro**: Os usuários podem escolher o tamanho do quadro em uma faixa de 5x5 a 12x12.
 
-- Existe um botão que gera cores aleatórias para a paleta.
+**Desenho**: Os usuários podem clicar em pixels individuais para preenchê-los com a cor selecionada. Os usuários podem clicar e arrastar para desenhar na tela.
 
-### Tamanho do Quadro
+**Persistência do Quadro**: O estado do quadro (cores dos pixels individuais) é salvo no armazenamento local, permitindo que os usuários revisitem seus desenhos mesmo após atualizar a página.
 
-- Os usuários podem escolher o tamanho do quadro em uma faixa de 5x5 a 12x12.
-
-### Desenho
-
-- Os usuários podem clicar em pixels individuais para preenchê-los com a cor selecionada.
-
-- Os usuários podem clicar e arrastar para desenhar na tela.
-
-### Persistência do Quadro
-
-- O estado do quadro (cores dos pixels individuais) é salvo no armazenamento local, permitindo que os usuários revisitem seus desenhos mesmo após atualizar a página.
-
-### Limpar o Quadro
-
-- Há um botão para limpar todo o quadro.
-
-## Como Começar
-
-1. Clone o repositório em sua máquina local.
-
-2. Abra o `index.html` em um navegador da web.
-
-3. Comece a desenhar no quadro!
+**Limpar o Quadro**: Há um botão para limpar todo o quadro.
 
 ## Como Usar
 
@@ -65,38 +57,3 @@ O Pixels Painter é uma aplicação web de arte em pixel que permite aos usuári
 6. **Salvar e Recarregar**:
    - O estado do quadro é salvo automaticamente no armazenamento local.
    - Você pode recarregar a página e seu desenho ainda estará lá.
-
-## Técnicas Utilizadas
-
-### Manipulação do DOM
-
-O projeto utiliza JavaScript para interagir com o Document Object Model (DOM) da página web. Isso permite a criação dinâmica de elementos HTML, a adição de event listeners e a atualização de estilos e conteúdos em tempo real.
-
-### Armazenamento Local
-
-A aplicação utiliza a capacidade de armazenamento local do navegador para persistir o estado do quadro de pixels e a paleta de cores. Isso garante que os desenhos dos usuários sejam mantidos mesmo após a atualização ou fechamento da página.
-
-### Geração de Cores Aleatórias
-
-Ao clicar no botão "Cores Aleatórias", a aplicação gera cores aleatórias em formato hexadecimal, proporcionando aos usuários uma ampla gama de opções de cores para escolher.
-
-### Responsividade
-
-O tamanho do quadro de pixels é adaptado com base no tamanho da tela do dispositivo do usuário. Isso garante uma experiência consistente, independentemente do dispositivo utilizado para acessar a aplicação.
-
-## Deploy e Imagens do Projeto
-
-### Deploy
-
-A aplicação está disponível online e pode ser acessada [aqui](link_do_projeto).
-
-### Imagens
-
-![Imagem 1 - Página Inicial](imagem_1.png)
-*Legenda: Descrição da imagem 1.*
-
-![Imagem 2 - Paleta de Cores](imagem_2.png)
-*Legenda: Descrição da imagem 2.*
-
-![Imagem 3 - Quadro de Pixels](imagem_3.png)
-*Legenda: Descrição da imagem 3.*
