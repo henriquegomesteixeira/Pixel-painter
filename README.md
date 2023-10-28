@@ -24,8 +24,6 @@ A aplicação está disponível online e pode ser acessada [aqui](https://pixel-
 
 **Geração de Cores Aleatórias**: Ao clicar no botão "Cores Aleatórias", a aplicação gera cores aleatórias em formato hexadecimal, proporcionando aos usuários uma ampla gama de opções de cores para escolher.
 
-**Responsividade**: O tamanho do quadro de pixels é adaptado com base no tamanho da tela do dispositivo do usuário. Isso garante uma experiência consistente, independentemente do dispositivo utilizado para acessar a aplicação.
-
 ## Funcionalidades
 
 **Paleta de Cores**: Os usuários podem selecionar cores de uma paleta para usar na pintura.
